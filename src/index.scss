@@ -58,4 +58,15 @@ code {
 
 .Right {
   grid-area: right;
+  justify-self: end;
+}
+
+
+.RecipePreview {
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.RecipePreview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 }
