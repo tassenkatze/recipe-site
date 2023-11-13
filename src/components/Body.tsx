@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RecipeList from "./RecipeList";
 
 function Body() {
@@ -10,8 +10,19 @@ function Body() {
     ])
 
     const handleClick = (id : number) => {
-        console.log("clicked on recipe with id: " + id)
+        console.log("clicked on block " + id);
+        const newRecipes = recipes.filter(recipe => recipe.id !== id)
+        setRecipes(newRecipes)
     }
+
+    useEffect(() => {
+        console.log("use effect")
+    })
+
+    // //only use following on first render
+    // useEffect(() => {
+    //     console.log("test")
+    // }, [])
 
     return ( 
         <div className="Content">
