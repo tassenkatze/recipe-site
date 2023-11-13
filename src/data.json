@@ -1,0 +1,35 @@
+{
+    "recipies": [
+        {
+            "id": 1, 
+            "title": "Rezept1", 
+            "body": "Hier dann die Anleitung...", 
+            "tags": ["tag1", "tag2"]
+        },
+        {
+            "id": 2, 
+            "title": "Rezept2", 
+            "body": "Hier dann die Anleitung...", 
+            "tags": ["tag1", "tag3"]
+        },
+        {
+            "id": 3, 
+            "title": "Rezept3", 
+            "body": "Hier dann die Anleitung...", 
+            "tags": ["tag1", "tag2", "tag3"]
+        },
+        {
+            "id": 4, 
+            "title": "Rezept4", 
+            "body": "Hier dann die Anleitung...", 
+            "tags": ["tag4", "tag5"]
+        }
+        ,
+        {
+            "id": 5, 
+            "title": "Rezept5", 
+            "body": "Hier dann die Anleitung...", 
+            "tags": []
+        }
+    ]
+}
