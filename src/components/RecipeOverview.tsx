@@ -1,35 +1,13 @@
 import { useEffect, useState } from "react";
 import RecipeList from "./RecipeList";
-import recipies from "../data.json"
+//import data from "../data.json"
 
 function RecipeOverview() {
-    const [recipeArray, setRecipeArray] = useState(recipies.recipies)
+    //const [recipeArray, setRecipeArray] = useState(data.recipies);
+    const [recipeArray, setRecipeArray] = useState();
+    const [isPending, setIsPending] = useState(true);
 
     // const [data, setData] = useState();
-
-    // const getData=()=>{
-    //     fetch('data.json',{
-    //         headers : {
-    //             'Content-Type': 'application/json',
-    //             'Accept': 'application/json'
-    //         }
-    //     })
-    //     .then(function(response){
-    //         return response.json();
-    //     })
-    //     .then(function(myJson) {
-    //         console.log(myJson);
-    //         console.log("bla" + myJson.recipes);
-    //         console.log(recipes);
-    //         setData(myJson)
-    //     });
-    // }
-
-    // useEffect(() => {
-    //     getData()
-    // },[])
-
-   
 
     const handleClick = (id : number) => {
         console.log("clicked on recipe " + id);
@@ -38,13 +16,29 @@ function RecipeOverview() {
     }
 
     useEffect(() => {
-        console.log(recipeArray)
+        // getting data from json-server
+        fetch("http://localhost:8000/recipies")
+            // then: only starts when kast task is finished
+            .then(res => {
+                // makes typescript array out of respopnse
+                return res.json();
+            })
+            .then((data => {
+                //use data from response
+                console.log(data);
+                setRecipeArray(data);
+                setIsPending(false);
+            }))
     },[])
 
     return ( 
         <>
             {/* adding component and passing props to that child component */}
-            <RecipeList recipes={recipeArray} title="Alle Rezepte" handleClick={handleClick}/>
+            {/* CONDITIONAL TEMPLATE: only renders when certain conditions are met (eg. both true/not null */}
+            {isPending && <div>Loading...</div>}
+            {/* only renders the following, if recipeArray is not null, because of &&  --> only renders once the data is saved in Array */}
+            {recipeArray && <RecipeList recipes={recipeArray} title="Alle Rezepte" handleClick={handleClick}/>}
+            
 
             {/* <RecipeList recipes={recipeArray.filter(FilterRecipes("tag1"))} title="Rezepte mit tag1" handleClick={handleClick}/> */}
         </>   
