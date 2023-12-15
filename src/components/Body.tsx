@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import RecipeOverview from "./RecipeOverview";
 
 function Body() {
@@ -7,17 +7,19 @@ function Body() {
     useEffect(() => {
         console.log("welcome!")
     }, [])
-    
 
-    return ( 
+
+    return (
         <div className="Content">
             <div className="Middle">
                 <h2>Willkommen zu meiner Rezepte Website</h2>
                 <RecipeOverview />
             </div>
         </div>
-     );
+    );
 }
+
+
 
 
 export default Body;
