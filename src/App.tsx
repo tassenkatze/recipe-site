@@ -1,10 +1,10 @@
 import Header from "./components/Header";
-import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Create from "./components/Create";
+import RecipeDetails from "./components/RecipeDetails";
+import RecipeOverview from "./components/RecipeOverview";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RecipeDetails from "./components/RecipeDetails";
 
 
 // components hat function, die element zurückgibt
@@ -17,7 +17,7 @@ function App() {
         <Header /> {/* use imported component */}
 
         <Routes>
-          <Route path="/recipe-site" element={<Body />} />
+          <Route path="/recipe-site" element={<RecipeOverview />} />
           <Route path="/recipe-site/create" element={<Create />} />
           <Route path="/recipe-site/lego" element={<div className="Content"><div className="Middle"><h2>Lego is great</h2></div></div>} />
           <Route path="/recipe-site/recipes/:id" element={<RecipeDetails />} />
