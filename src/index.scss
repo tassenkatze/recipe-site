@@ -77,6 +77,11 @@ code {
   margin: 20px 0;
 }
 
+.RecipePreview>a {
+  text-decoration: none;
+  color: $colourPrimary;
+}
+
 .RecipePreview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 }

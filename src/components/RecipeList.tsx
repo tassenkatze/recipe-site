@@ -1,20 +1,25 @@
+import { Link } from "react-router-dom";
+
 function RecipeList(props: any) {
     const recipes = props.recipes;
     const title = props.title;
 
-    return ( 
+    return (
         <div className="Recipes">
             <h3>{title}</h3>
             {recipes.map((recipe: any) => (
                 <div className="RecipePreview" key={recipe.id}>
-                    <h3>{recipe.title}</h3>
-                    <p>{recipe.body}</p>
-                    <p>{recipe.tags}</p>
+                    <Link to={`/recipe-site/recipes/${recipe.id}`}>
+                        <h3>{recipe.title}</h3>
+                        <p>{recipe.body}</p>
+                        <p>{recipe.tags}</p>
+
+                    </Link>
                     <button onClick={() => props.handleClick(recipe.id)}>Click here!</button>
                 </div>
             ))}
         </div>
-     );
+    );
 }
 
 export default RecipeList;
