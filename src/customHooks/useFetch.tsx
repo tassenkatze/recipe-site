@@ -13,7 +13,7 @@ const useFetch = (url: string) => {
             // then: only starts when kast task is finished
             .then(res => {
                 // throwing error (with own message) if response.ok is false
-                if(!res.ok) {
+                if (!res.ok) {
                     throw Error('Could not fetch data')
                 }
                 // makes typescript array out of response object (res)
@@ -31,8 +31,8 @@ const useFetch = (url: string) => {
                 setIsPending(false);
                 setError(e.message);
             })
-    // hook depends on url --> code is rerun, when url changes
-    },[url])
+        // hook depends on url --> code is rerun, when url changes
+    }, [url])
 
     return { data, isPending, error }
 }
