@@ -11,15 +11,21 @@ function RecipeList(props: any) {
                 <div className="RecipePreview" key={recipe.id}>
                     <Link to={`/recipe-site/recipes/${recipe.id}`}>
                         <h3>{recipe.title}</h3>
-                        <p>{recipe.body}</p>
-                        <p>{recipe.tags}</p>
-
+                        {recipe.tags.map((tag: any) => (
+                            (<div className="Tag">{tag}</div>)
+                        ))}
                     </Link>
-                    <button onClick={() => props.handleClick(recipe.id)}>Click here!</button>
+                    {/* <button onClick={() => props.handleClick(recipe.id)}>Click here!</button> */}
                 </div>
             ))}
         </div>
     );
+}
+
+function getTags(tags: any) {
+    {
+
+    }
 }
 
 export default RecipeList;
