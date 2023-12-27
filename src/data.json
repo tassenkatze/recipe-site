@@ -1,7 +1,6 @@
 {
     "recipies": [
         {
-            "id": 1,
             "title": "Schwarz-Weiß-Kekse",
             "ingredients": [
                 [
@@ -42,7 +41,6 @@
             ]
         },
         {
-            "id": 2,
             "title": "Maulwurfskuchen",
             "ingredients": [
                 [

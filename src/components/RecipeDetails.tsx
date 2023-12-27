@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 
 function RecipeDetails() {
     // getting parameter from url (here called id -> see App.tsx)
-    const { id } = useParams()
+    const { title } = useParams()
 
     return (<>
         <div className="Content">
             <div className="Middle">
-                <h2>blubb - {id}</h2>
+                <h2>{title}</h2>
             </div>
         </div>
     </>);
