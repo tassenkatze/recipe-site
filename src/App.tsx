@@ -20,7 +20,7 @@ function App() {
           <Route path="/recipe-site" element={<RecipeOverview />} />
           <Route path="/recipe-site/create" element={<Create />} />
           <Route path="/recipe-site/lego" element={<div className="Content"><div className="Middle"><h2>Lego is great</h2></div></div>} />
-          <Route path="/recipe-site/recipes/:title" element={<RecipeDetails />} />
+          <Route path="/recipe-site/recipes/:key" element={<RecipeDetails />} />
 
         </Routes>
 

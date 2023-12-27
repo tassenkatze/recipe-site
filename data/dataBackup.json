@@ -1,35 +1,116 @@
 {
     "recipies": [
         {
-            "id": 1, 
-            "title": "Rezept1", 
-            "body": "Hier dann die Anleitung...", 
-            "tags": ["tag1", "tag2"]
+            "key": "schwarz-weiss-kekse",
+            "title": "Schwarz-Weiß-Kekse",
+            "ingredients": [
+                [
+                    "300g",
+                    "Butter"
+                ],
+                [
+                    "150g",
+                    "Puderzucker"
+                ],
+                [
+                    "1 Prise",
+                    "Salz"
+                ],
+                [
+                    "400g",
+                    "Mehl"
+                ],
+                [
+                    "30g",
+                    "Kakaopulver"
+                ]
+            ],
+            "method": [
+                "Weiche Butter mit Mehl und Salz verkneten",
+                "Mehl untermischen",
+                "Teig in zwei Hälften teilen",
+                "Kakao in eine der Hälften untermischen",
+                "Schachbrett- oder Schenckenmuster formen",
+                "Erkalten lassen und in Scheiben schneiden",
+                "Im Backofen bei 190° für ca. 10 min backen"
+            ],
+            "comment": "Anleitung zum Formen der Muster folgt noch",
+            "tags": [
+                "kekse",
+                "süß",
+                "backen"
+            ]
         },
         {
-            "id": 2, 
-            "title": "Rezept2", 
-            "body": "Hier dann die Anleitung...", 
-            "tags": ["tag1", "tag3"]
-        },
-        {
-            "id": 3, 
-            "title": "Rezept3", 
-            "body": "Hier dann die Anleitung...", 
-            "tags": ["tag1", "tag2", "tag3"]
-        },
-        {
-            "id": 4, 
-            "title": "Rezept4", 
-            "body": "Hier dann die Anleitung...", 
-            "tags": ["tag4", "tag5"]
-        }
-        ,
-        {
-            "id": 5, 
-            "title": "Rezept5", 
-            "body": "Hier dann die Anleitung...", 
-            "tags": []
+            "key": "maulwurfskuchen",
+            "title": "Maulwurfskuchen",
+            "ingredients": [
+                [
+                    "100g",
+                    "Butter"
+                ],
+                [
+                    "120g",
+                    "Zucker"
+                ],
+                [
+                    "2",
+                    "Eier"
+                ],
+                [
+                    "150g",
+                    "Mehl"
+                ],
+                [
+                    "30g",
+                    "Kakaopulver"
+                ],
+                [
+                    "1 TL",
+                    "Backpulver"
+                ],
+                [
+                    "75ml",
+                    "Milch"
+                ],
+                [
+                    "3 Bananen",
+                    "Kakaopulver"
+                ],
+                [
+                    "500ml",
+                    "Sahne"
+                ],
+                [
+                    "2 Pkt.",
+                    "Sahnesteif"
+                ],
+                [
+                    "",
+                    "Schokoflocken"
+                ]
+            ],
+            "method": [
+                "Weiche Butter mit Zucker schaumig schlagen",
+                "Eier einzeln hinzugeben",
+                "Mehl mit Kakao und Backpulver in einer extra Schüssel mixen",
+                "Mehlmischung und Milch abwechseld in kleineren Protionen zu Zuckermasse hinzufügen und verrühren",
+                "Im unteren Drittel des Backofen bei 170° für ca. 30 min backen",
+                "Erkalten lassen",
+                "Mit einem Löffel den oberen Teil des Kuchen ca. 1 cm tief aushöhlen, dabei einen ca. 2cm breiten Rand stehen lassen",
+                "Abgenommen Teil des Kuchens zerkrümeln",
+                "Bananen Schälen und quer halbiert in den ausgehöhlten Boden geben",
+                "Sahne steife schlagen. Optional Zucker und Vanille hinzufügen",
+                "Schokoflocken unter Sahne heben",
+                "Sahne auf dem Kuchen verteilen. Zur Mitte hin höher werden",
+                "Teigkrümel über dem Kuchen verteilen"
+            ],
+            "comment": "Bananen lassen isch auch durch andere, möglichst weiche Früche (zb Kiwi) ersetzen",
+            "tags": [
+                "kuchen",
+                "süß",
+                "backen"
+            ]
         }
     ]
 }

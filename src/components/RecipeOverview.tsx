@@ -8,12 +8,11 @@ import RecipeList from "./RecipeList";
 function RecipeOverview() {
     //const [recipeArray, setRecipeArray] = useState(data.recipies);
 
+    //useFetch gibt 'data' zurück, wird hier als 'recipeArray' verwendet
     const { data: recipeArray, isPending, error } = useFetch("http://localhost:8000/recipies")
 
-    const handleClick = (id: number) => {
-        console.log("clicked on recipe " + id);
-        // const newRecipes = recipes.filter(recipe => recipe.id !== id)
-        // setRecipes(newRecipes)
+    const handleClick = (title: string) => {
+        console.log("clicked on recipe " + title);
     }
 
     //only use following on first render
@@ -34,7 +33,7 @@ function RecipeOverview() {
                 {recipeArray && !error && <RecipeList recipes={recipeArray} title="Alle Rezepte" handleClick={handleClick} />}
 
 
-                {/* {recipeArray && !error && <RecipeList recipes={recipeArray.filter(FilterRecipes("tag1"))} title="Rezepte mit tag1" handleClick={handleClick}/>} */}
+                {/* {recipeArray && !error && <RecipeList recipes={recipeArray.filter(FilterRecipes("süß"))} title="Süße Rezepte" handleClick={handleClick} />} */}
             </div>
         </div>
     );

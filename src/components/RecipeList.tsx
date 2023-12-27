@@ -8,8 +8,8 @@ function RecipeList(props: any) {
         <div className="Recipes">
             <h3>{title}</h3>
             {recipes.map((recipe: any) => (
-                <div className="RecipePreview" key={recipe.title}>
-                    <Link to={`/recipe-site/recipes/${recipe.title}`}>
+                <div className="RecipePreview" key={recipe.key}>
+                    <Link to={"/recipe-site/recipes/" + recipe.key}>
                         <h3>{recipe.title}</h3>
                         {recipe.tags.map((tag: any) => (
                             (<div className="Tag">{tag}</div>)

@@ -1,7 +1,7 @@
 {
     "recipies": [
         {
-            "id": 1,
+            "key": "schwarz-weiss-kekse",
             "title": "Schwarz-Weiß-Kekse",
             "ingredients": [
                 [
@@ -30,7 +30,7 @@
                 "Mehl untermischen",
                 "Teig in zwei Hälften teilen",
                 "Kakao in eine der Hälften untermischen",
-                "Schachbrett-  oder Schenckenmuster formen",
+                "Schachbrett- oder Schenckenmuster formen",
                 "Erkalten lassen und in Scheiben schneiden",
                 "Im Backofen bei 190° für ca. 10 min backen"
             ],
@@ -42,7 +42,7 @@
             ]
         },
         {
-            "id": 2,
+            "key": "maulwurfskuchen",
             "title": "Maulwurfskuchen",
             "ingredients": [
                 [
@@ -94,7 +94,7 @@
                 "Weiche Butter mit Zucker schaumig schlagen",
                 "Eier einzeln hinzugeben",
                 "Mehl mit Kakao und Backpulver in einer extra Schüssel mixen",
-                "Mehlmischung un Milchen abwechseld in kleineren Protionen zu Zuckermasse hinzufügen und verrühren",
+                "Mehlmischung und Milch abwechseld in kleineren Portionen zu Zuckermasse hinzufügen und verrühren",
                 "Im unteren Drittel des Backofen bei 170° für ca. 30 min backen",
                 "Erkalten lassen",
                 "Mit einem Löffel den oberen Teil des Kuchen ca. 1 cm tief aushöhlen, dabei einen ca. 2cm breiten Rand stehen lassen",
