@@ -4,7 +4,7 @@ import useFetch from "../customHooks/useFetch";
 function RecipeDetails() {
     // getting parameter from url (here called id -> see App.tsx)
     const { key } = useParams()
-    const { data: recipe, error, isPending } = useFetch("http://localhost:8000/recipies?key=" + key)
+    const { data: recipe, error, isPending } = useFetch("http://localhost:8000/recipies", key)
 
 
 

@@ -4,10 +4,14 @@ import jsonData from "../data/data.json";
 // erstellen von custom Hook um es überall zu verwenden
 // speichern der functiion als const, Name muss mit 'use' beginnen
 
-const useFetchAPI = (url: string) => {
+const useFetchAPI = (url: string, key?: string) => {
     const [data, setData] = useState();
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
+
+    if (key) {
+        url = url + "?key=" + key
+    }
 
     useEffect(() => {
         // getting data from json-server
@@ -23,9 +27,8 @@ const useFetchAPI = (url: string) => {
             })
             .then((fetchedData => {
                 //use data from response
-                //console.log(data);
+                //console.log(fetchedData);
                 setData(fetchedData);
-                //console.log(data);
                 setIsPending(false);
                 setError(null);
             }))
@@ -40,13 +43,18 @@ const useFetchAPI = (url: string) => {
     return { data, isPending, error }
 }
 
-const useFetchJsonFile = (source: string) => {
+const useFetchJsonFile = (source: string, key?: string) => {
     const [data, setData] = useState<any[]>();
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        setData(jsonData.recipies);
+        let objectData = jsonData.recipies;
+        if (key) {
+            objectData = jsonData.recipies.filter(i => i.key == key)
+        }
+
+        setData(objectData);
         setIsPending(false);
         setError(null);
     })
