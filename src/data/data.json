@@ -111,6 +111,170 @@
                 "süß",
                 "backen"
             ]
+        },
+        {
+            "key": "ofenkartoffeln",
+            "title": "Ofenkartoffeln"
+            "ingredients": [
+                [
+                    "",
+                    "Kartoffeln"
+                ],
+                [
+                    "",
+                    "Olivenöl"
+                ],
+                [
+                    "",
+                    "Gewürze nach belieben (Salz, Pfeffer, Rosmarin, Thymian)" 
+                ]
+            ],
+            "method": [
+                "Kartoffeln waschen und längs schneiden",
+                "Kartoffelhälften mit der Schnittseite nach oben auf dem Belch verteilen",
+                "Kartoffeln mit Öl einpinseln",
+                "Gewürze auf den Kartoffeln verteilen",
+                "Im Ofen bei 180° Ober-/unterhitze für ca. eine halbe Stunde backen"
+            ],
+            "comment": "",
+            "tags": [
+                "kartoffeln",
+                "backen",
+                "herzhaft"
+            ]
+            
+        },
+        {
+            "key": "miniguglhupf-schokolade",
+            "title": "Miniguglhupf Schokolade"
+            "ingredients": [
+                [
+                    "60g",
+                    "Butter"
+                ],
+                [
+                    "60g",
+                    "Puderzucker"
+                ],
+                [
+                    "1",
+                    "Ei" 
+                ],
+                [
+                    "60g",
+                    "Mehl"
+                ],
+                [
+                    "80g",
+                    "Schokocreme (Nutella oder ähnliches"
+                ]
+                
+            ],
+            "method": [
+                "Butter schmelzen",
+                "Butter mit Puderzucker schaumig schlagen",
+                "Nacheinander das Ei, das Mehl und die Schokocreme unterheben",
+                "Für ca. 15 Minuten bei 180° Umluft backen"
+            ],
+            "comment": "Zutatenangaben reichen für ca. eine Miniguglhupfform",
+            "tags": [
+                "minigugl",
+                "backen",
+                "süß",
+                "schokolade"
+            ]
+        },
+        {
+            "key": "miniguglhupf-smarties",
+            "title": "Miniguglhupf Smarties"
+            "ingredients": [
+                [
+                    "60g",
+                    "Butter"
+                ],
+                [
+                    "60g",
+                    "Puderzucker"
+                ],
+                [
+                    "1 Päckchen",
+                    "Vanillezucker"
+                ],
+                [
+                    "1",
+                    "Ei" 
+                ],
+                [
+                    "60g",
+                    "Mehl"
+                ],
+                [
+                    "20g",
+                    "Sahne"
+                ]
+                
+            ],
+            "method": [
+                "Butter schmelzen",
+                "Butter mit Puderzucker und Vanillezucker schaumig schlagen",
+                "Nacheinander das Ei und das Mehl unterheben",
+                "Sahne schlagen und unterheben",
+                "Smarties zugeben",
+                "Für ca. 15 Minuten bei 210° Umluft backen"
+            ],
+            "comment": "Zutatenangaben reichen für ca. eine Miniguglhupfform",
+            "tags": [
+                "minigugl",
+                "backen",
+                "süß",
+                "smarties"
+            ]  
+        },
+        {
+            "key": "dal-bhat",
+            "title": "Dal Bhat"
+            "ingredients": [
+                [
+                    "1,5 Becher",
+                    "Rotes Linsen"
+                ],
+                [
+                    "1 Becher",
+                    "Basmati Reis"
+                ],
+                [
+                    "",
+                    "Gewürze nach Belieben (Salz, Pfeffer, Curry, Kreuzkümmel, Chili, Muskatnuss, Knoblauch, Zimt,...)" 
+                ]
+            ],
+            "method": [
+                "folgt noch"
+            ],
+            "comment": "",
+            "tags": [
+                "dal-bhat",
+                "nepal",
+                "herzhaft",
+                "curry"
+            ]
+        }
+        },
+        {
+            "key": "blubb",
+            "title": "Platzhalter"
+            "ingredients": [
+                [
+                    "0g",
+                    "Platzhalter"
+                ]
+            ],
+            "method": [
+                "Platzhalter"
+            ],
+            "comment": "",
+            "tags": [
+                "platzhalter"
+            ]
         }
     ]
 }
