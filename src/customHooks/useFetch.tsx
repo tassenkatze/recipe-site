@@ -62,4 +62,6 @@ const useFetchJsonFile = (source: string, key?: string) => {
     return { data, isPending, error }
 }
 
+
+// change default to switch between fetch functions
 export default useFetchJsonFile;
