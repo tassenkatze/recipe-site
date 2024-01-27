@@ -105,7 +105,7 @@
                 "Sahne auf dem Kuchen verteilen. Zur Mitte hin höher werden",
                 "Teigkrümel über dem Kuchen verteilen"
             ],
-            "comment": "Bananen lassen isch auch durch andere, möglichst weiche Früche (zb Kiwi) ersetzen",
+            "comment": "Bananen lassen isch auch durch andere, möglichst weiche Früche (zb Birne/Kiwi) ersetzen",
             "tags": [
                 "kuchen",
                 "süß",
@@ -126,7 +126,7 @@
                 ],
                 [
                     "",
-                    "Gewürze nach belieben (Salz, Pfeffer, Rosmarin, Thymian)" 
+                    "Gewürze nach belieben (Salz, Pfeffer, Rosmarin, Thymian)"
                 ]
             ],
             "method": [
@@ -142,7 +142,6 @@
                 "backen",
                 "herzhaft"
             ]
-            
         },
         {
             "key": "miniguglhupf-schokolade",
@@ -158,7 +157,7 @@
                 ],
                 [
                     "1",
-                    "Ei" 
+                    "Ei"
                 ],
                 [
                     "60g",
@@ -168,7 +167,6 @@
                     "80g",
                     "Schokocreme (Nutella oder ähnliches"
                 ]
-                
             ],
             "method": [
                 "Butter schmelzen",
@@ -202,7 +200,7 @@
                 ],
                 [
                     "1",
-                    "Ei" 
+                    "Ei"
                 ],
                 [
                     "60g",
@@ -212,7 +210,6 @@
                     "20g",
                     "Sahne"
                 ]
-                
             ],
             "method": [
                 "Butter schmelzen",
@@ -228,7 +225,7 @@
                 "backen",
                 "süß",
                 "smarties"
-            ]  
+            ]
         },
         {
             "key": "dal-bhat",
@@ -244,18 +241,58 @@
                 ],
                 [
                     "",
-                    "Gewürze nach Belieben (Salz, Pfeffer, Curry, Kreuzkümmel, Chili, Muskatnuss, Knoblauch, Zimt,...)" 
+                    "Wasser"
+                ],
+                [
+                    "",
+                    "Gewürze nach Belieben (Salz, Pfeffer, Curry, Kreuzkümmel, Chili, Muskatnuss, Knoblauch, Zimt,...)"
                 ]
             ],
             "method": [
-                "folgt noch"
+                "Linsen und Reis waschen",
+                "Linsen in Top mit Wasser bedecken und köcheln lassen. Gewürze hinzufügen. Immer wieder Wasser hinzufügen, um eine dickflüssige 'Suppe' zu erhalten",
+                "Reis mit der 2.5 fachen Menge an Wasser kochen",
+                "Beilagen zubereiten"
             ],
-            "comment": "",
+            "comment": "Meine Gewürze für Linsen: Salz, Pfeffer, Muskatnuss, Curry, Cumin, Knoblauch . Ich bereite die Linsen sehr salzig zu und die Beilage eher scharf",
             "tags": [
                 "dal-bhat",
                 "nepal",
                 "herzhaft",
                 "curry"
+            ]
+        },
+        {
+            "key": "tofu-hackfleisch",
+            "title": "Tofu-Hackfleisch",
+            "ingredients": [
+                [
+                    "1 Packung",
+                    "Tofu"
+                ],
+                [
+                    "ca. 2 EL",
+                    "Tomatenmark"
+                ],
+                [
+                    "ca. 1 EL",
+                    "Sojasoße"
+                ],
+                [
+                    "",
+                    "Öl zum anbraten"
+                ]
+            ],
+            "method": [
+                "Tofu (mit Händen) zerkrümeln",
+                "Öl erhitzen und Tofu darin anbraten",
+                "Wenn das Tofu braungebraten ist, Tomatenmark und Sojasoße hinzufügen und alles etwas kochen lassen"
+            ],
+            "comment": "",
+            "tags": [
+                "tofu",
+                "kochen",
+                "vegan"
             ]
         },
         {
