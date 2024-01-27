@@ -51,7 +51,7 @@ const useFetchJsonFile = (source: string, key?: string) => {
     useEffect(() => {
         let objectData = jsonData.recipies;
         if (key) {
-            objectData = jsonData.recipies.filter(i => i.key == key)
+            objectData = jsonData.recipies.filter(i => i.key === key)
         }
 
         setData(objectData);
