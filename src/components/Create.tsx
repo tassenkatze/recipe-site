@@ -1,38 +1,39 @@
 import { useState } from "react";
-import { MultiValue } from "react-select";
+import { ActionMeta } from "react-select";
 import CreatableSelect from "react-select/creatable"
 
 function Create() {
-    type OptionType = {
+    type Tag = {
         value: string;
         label: string;
     };
 
     const [title, setTitle] = useState("");
     const [comment, setComment] = useState("");
-    const [tags, setTags] = useState<String[]>([]);
+    const [tags, setTags] = useState<Tag[]>([]);
 
-    const [options, setOptions] = useState<OptionType[]>([
+    const [availableTags, setAvailableTags] = useState<Tag[]>([
         { value: "kochen", label: "kochen" },
         { value: "backen", label: "backen" },
         { value: "herzhaft", label: "herzhaft" },
         { value: "süß", label: "süß" },
     ]);
 
-    const handleCreateTags = (input: string) => {
-        const newOption = {
-            label: input.toLowerCase().replace(/\W/g, ''),
-            value: input.toLowerCase().replace(/\W/g, ''),
+    const handleCreateTags = (newTagName: string) => {
+        const newTag: Tag = {
+            label: newTagName.toLowerCase().replace(/\W/g, ''),
+            value: newTagName.toLowerCase().replace(/\W/g, ''),
         }
-        setOptions((prev) => [...prev, newOption]);
-        setTags((prev) => [...prev, input]);
+        setTags((prev) => [...prev, newTag]);
+        setAvailableTags((prev) => [...prev, newTag]);
     }
 
-    const handleOnCreate = (input: MultiValue<OptionType>) => {
-        setTags((prev) => [...prev, input[0].value])
-        console.log(input)
-        console.log(options)
-    }
+    const handleOnCreate = (selectedTags: readonly Tag[]) => {
+        if (selectedTags) {
+            const tags: Tag[] = [...selectedTags]
+            setTags(tags);
+        }
+    };
 
     return (
         <div className="Content">
@@ -55,16 +56,12 @@ function Create() {
                     <label>Tags</label>
                     <CreatableSelect
                         isMulti
-                        options={options}
-                        onChange={(input) => handleOnCreate(input)}
-                        // onChange={(option: readonly Option[], actionMeta: ActionMeta<Option>) => }
-                        // onChange={(input) => setTags((prev) => [...prev, input])}
+                        options={availableTags}
+                        onChange={handleOnCreate}
                         onCreateOption={handleCreateTags}
+                        value={tags}
                     />
                     <button>Add recipe</button>
-                    <br />
-                    <p>{tags}</p>
-                    <p>{options[1].value}</p>
                 </form>
             </div>
         </div>
