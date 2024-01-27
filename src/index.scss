@@ -96,23 +96,39 @@ code {
   font-size: 15px;
 }
 
+
 // CreateForm
 .CreateForm label {
   text-align: left;
   display: block;
+  font-weight: bold;
 }
 
-.CreateForm input,
-.CreateForm textarea {
+.FullWidthInput input,
+.FullWidthInput textarea {
   width: 100%;
   padding: 5px;
   display: block;
   box-sizing: border-box;
 }
 
+.HalfWidthInput {
+  display: grid;
+  grid-template-columns: auto 2px auto;
+  gap: 2px;
+}
+
+.HalfWidthInput input {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+
+
 .CreateForm CreatableSelect {
   width: 100%;
 }
+
 
 .CreateForm button {
   margin: 5px 0px;
