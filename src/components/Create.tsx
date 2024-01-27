@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ActionMeta } from "react-select";
 import CreatableSelect from "react-select/creatable"
 
 function Create() {
@@ -19,7 +18,7 @@ function Create() {
         { value: "süß", label: "süß" },
     ]);
 
-    const handleCreateTags = (newTagName: string) => {
+    const handleCreateTags = (newTagName: string): void => {
         const newTag: Tag = {
             label: newTagName.toLowerCase().replace(/\W/g, ''),
             value: newTagName.toLowerCase().replace(/\W/g, ''),
@@ -28,11 +27,11 @@ function Create() {
         setAvailableTags((prev) => [...prev, newTag]);
     }
 
-    const handleOnCreate = (selectedTags: readonly Tag[]) => {
+    const handleOnCreate = (selectedTags: readonly Tag[]): void => {
         if (selectedTags) {
-            const tags: Tag[] = [...selectedTags]
-            setTags(tags);
+            setTags([...selectedTags]);
         }
+
     };
 
     return (
@@ -40,20 +39,20 @@ function Create() {
             <div className="Middle">
                 <h2>Add new recipe</h2>
                 <form className="CreateForm">
-                    <label>Recipe title</label>
+                    <label htmlFor="recipeTitle">Recipe title</label>
                     <input
                         type="text"
                         required
                         value={title}
-                        onChange={(input) => setTitle(input.target.value)}
+                        onChange={(input: React.ChangeEvent<HTMLInputElement>) => setTitle(input.target.value)}
                     />
-                    <label>Kommentar</label>
+                    <label htmlFor="recipeComment">Kommentar</label>
                     <textarea
                         required
                         value={comment}
-                        onChange={(input) => setComment(input.target.value)}
+                        onChange={(input: React.ChangeEvent<HTMLTextAreaElement>) => setComment(input.target.value)}
                     />
-                    <label>Tags</label>
+                    <label htmlFor="tags">Tags</label>
                     <CreatableSelect
                         isMulti
                         options={availableTags}
