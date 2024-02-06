@@ -2,16 +2,36 @@ import { useEffect, useState } from "react"
 import jsonData from "../data/data.json";
 
 // erstellen von custom Hook um es überall zu verwenden
-// speichern der functiion als const, Name muss mit 'use' beginnen
+// speichern der function als const, Name muss mit 'use' beginnen
 
-const useFetchAPI = (url: string, key?: string) => {
-    const [data, setData] = useState();
+export const useFetch = (source: string) => {
+
+    // // for JSON
+    const { data, error, isPending } = useFetchJsonFile()
+
+    // for API
+    // const { data , error, isPending } = useFetchAPI(url)
+
+    return { data, isPending, error }
+}
+
+export const useFetchWithKey = (source: string, key?: string) => {
+
+    // // for JSON
+    const { data, error, isPending } = useFetchJsonFile()
+    const objectData: Recipe = data.filter(i => i.key === key)[0]
+
+    // for API
+    // const url = source + "?key=" + key
+    // const { data : objectData, error, isPending } = useFetchAPI(url)
+
+    return { objectData, isPending, error }
+}
+
+export const useFetchAPI = (url: string) => {
+    const [data, setData] = useState<RecipeData>([]);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
-
-    if (key) {
-        url = url + "?key=" + key
-    }
 
     useEffect(() => {
         // getting data from json-server
@@ -43,16 +63,13 @@ const useFetchAPI = (url: string, key?: string) => {
     return { data, isPending, error }
 }
 
-const useFetchJsonFile = (source: string, key?: string) => {
-    const [data, setData] = useState<any[]>();
+export const useFetchJsonFile = () => {
+    const [data, setData] = useState<Recipe[]>([]);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        let objectData = jsonData.recipies;
-        if (key) {
-            objectData = jsonData.recipies.filter(i => i.key === key)
-        }
+        let objectData: Recipe[] = jsonData.recipies;
 
         setData(objectData);
         setIsPending(false);
@@ -61,7 +78,3 @@ const useFetchJsonFile = (source: string, key?: string) => {
 
     return { data, isPending, error }
 }
-
-
-// change default to switch between fetch functions
-export default useFetchJsonFile;

@@ -2,15 +2,6 @@ import { useEffect, useState } from "react";
 import CreatableSelect from "react-select/creatable"
 
 function Create() {
-    type Tag = {
-        value: string;
-        label: string;
-    };
-
-    type Ingredient = {
-        amount: string;
-        name: string;
-    }
 
     let callOnce: boolean;
 
@@ -78,11 +69,15 @@ function Create() {
 
     };
 
+    const handleSubmit = (e: React.SyntheticEvent): void => {
+        e.preventDefault();
+    }
+
     return (
         <div className="Content">
             <div className="Middle">
                 <h2>Add new recipe</h2>
-                <form className="CreateForm">
+                <form className="CreateForm" onSubmit={handleSubmit}>
                     <div className="FullWidthInput">
                         <label htmlFor="recipeTitle">Titel</label>
                         <input
@@ -131,7 +126,6 @@ function Create() {
                         </div>
                         <input
                             type="text"
-                            required
                             value={currentMethod}
                             onChange={(input: React.ChangeEvent<HTMLInputElement>) => setCurrentMethod(input.target.value)}
                         />

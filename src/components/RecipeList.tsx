@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 
-function RecipeList(props: any) {
-    const recipes = props.recipes;
+function RecipeList(props: RecipeListProps) {
+    const recipes = props.recipes as Array<Recipe>;
     const title = props.title;
 
     return (
         <div className="Recipes">
             <h3>{title}</h3>
-            {recipes.map((recipe: any) => (
+            {recipes.map((recipe: Recipe) => (
                 <div className="RecipePreview" key={recipe.key}>
                     <Link to={"/recipe-site/recipes/" + recipe.key}>
                         <h3>{recipe.title}</h3>
-                        {recipe.tags.map((tag: any) => (
+                        {recipe.tags.map((tag: string) => (
                             (<div className="Tag">{tag}</div>)
                         ))}
                     </Link>
@@ -22,10 +22,5 @@ function RecipeList(props: any) {
     );
 }
 
-function getTags(tags: any) {
-    {
-
-    }
-}
 
 export default RecipeList;
